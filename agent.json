@@ -1,0 +1,15 @@
+{
+"kinesis.endpoint": "kinesis.us-east-1.amazonaws.com", 
+"flows": [ 
+{ 
+	"filePattern": "/tmp/logs/access_log*", 
+	"kinesisStream": "datastream-ingestion", 
+	"dataProcessingOptions": 
+	[ 
+		{ 
+			"optionName": "LOGTOJSON", 
+			"logFormat": "COMMONAPACHELOG" 
+		}
+	]
+}]
+}
